@@ -11,7 +11,7 @@ Some reveal.js features, like external Markdown and speaker notes, require that 
    git clone https://github.com/marcinru/es2015.git
    ```
 
-1. Navigate to the folder where you clone the repo
+1. Navigate to the folder where you cloned the repo
    ```
    cd es2015
    ```
