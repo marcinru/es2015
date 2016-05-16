@@ -22,7 +22,7 @@
         </script>
         <style>
             .reveal .code {
-                font-size: 150%; line-height: normal; padding: 15px;
+                font-size: 130%; line-height: normal; padding: 15px;
             }
         </style>
     </head>
@@ -215,17 +215,53 @@
                     </table>
                 </section>
                 <section>
-                    <h3>Do you know the "old" JavaScript?</h3>
-                    <p style="text-align: left;">1. What will the following instruction return?</p>
+                    <section>
+                        <h3>Do you know the "old" JavaScript?</h3>
+                        <p style="text-align: left;">1. What will the following instruction return?</p>
                     <pre><code class="hljs code" data-trim contenteditable>
 ["1", "2", "3"].map(parseInt);
                     </code></pre>
-                    <ol style="list-style-type: lower-alpha;">
-                        <li>[1, 2, 3]</li>
-                        <li>["1", "2", "3"]</li>
-                        <li>[1, NaN, NaN]</li>
-                        <li>Uncaught ReferenceError: parseInt is not defined</li>
-                    </ol>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>[1, 2, 3]</li>
+                            <li>["1", "2", "3"]</li>
+                            <li>[1, NaN, NaN]</li>
+                            <li>Uncaught ReferenceError: parseInt is not defined</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Do you know the "old" JavaScript?</h3>
+                        <p style="text-align: left;">2. What will the following instruction return?</p>
+                    <pre><code class="hljs code" data-trim contenteditable>
+["a", "b", "1", "2", "3"].map(parseInt).splice(2);
+                    </code></pre>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>[1, 2, 3]</li>
+                            <li>["1", "2", "3"]</li>
+                            <li>[1, NaN, NaN, NaN, NaN]</li>
+                            <li>["a", "b", "1", "2", "3"]</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <p style="text-align: left;">
+                            The parseInt() function parses a string argument and returns an integer of the specified
+                            radix (the base in mathematical numeral systems).
+                        </p>
+                    <pre><code class="hljs code" data-trim contenteditable>
+/*
+parseInt(string, radix);
+*/
+parseInt("100", 10); // 100, same as parseInt("100");
+parseInt("100", 8);  // 64
+parseInt("100", 2);  // 4
+
+parseInt("1", 0);    // 1, same as parseInt("1");
+parseInt("2", 1);    // NaN
+parseInt("3", 2);    // NaN
+
+parseInt("2", 3);    // 2
+parseInt("3", 4);    // 3
+                    </code></pre>
+                    </section>
                 </section>
             </div>
         </div>
