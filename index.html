@@ -216,7 +216,7 @@
                 </section>
                 <section>
                     <section>
-                        <h3>Do you know the "old" JavaScript?</h3>
+                        <h3>Do you know JavaScript?</h3>
                         <p style="text-align: left;">1. What will the following instruction return?</p>
                     <pre><code class="hljs code" data-trim contenteditable>
 ["1", "2", "3"].map(parseInt);
@@ -229,7 +229,7 @@
                         </ol>
                     </section>
                     <section>
-                        <h3>Do you know the "old" JavaScript?</h3>
+                        <h3>Do you know JavaScript?</h3>
                         <p style="text-align: left;">2. What will the following instruction return?</p>
                     <pre><code class="hljs code" data-trim contenteditable>
 ["a", "b", "1", "2", "3"].map(parseInt).splice(2);
@@ -261,6 +261,21 @@ parseInt("3", 2);    // NaN
 parseInt("2", 3);    // 2
 parseInt("3", 4);    // 3
                     </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Do you know JavaScript?</h3>
+                        <p style="text-align: left;">3. What will the following instruction return?</p>
+                    <pre><code class="hljs code" data-trim contenteditable>
+["1", "112", "113"].map(d => +d);
+                    </code></pre>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>[1, 112, 113]</li>
+                            <li>["1", "112", "113"]</li>
+                            <li>[1, NaN, NaN]</li>
+                            <li>Uncaught ReferenceError: d is not defined</li>
+                        </ol>
                     </section>
                 </section>
             </div>
