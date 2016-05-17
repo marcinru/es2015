@@ -292,10 +292,11 @@ parseInt("3", 4);    // 3
                             The issue is to select six numbers which can be any integer from 1 to 48, called a combination.
                         </p>
                         <pre><code class="hljs code" data-trim contenteditable>
-// returns 6 random integers from range 1-48
-// example output: [4, 5, 7, 36, 43, 47]
+// returns 6 random integers from range 1-48,
+// sorted ascending; example output:
+// [4, 5, 7, 36, 43, 47]
 
-[...Array(48).keys()].map(n => n+1)
+[...Array(48).keys()].map(n => n + 1)
                      .sort(()=>0.5-Math.random())
                      .slice(-6).sort((a,b)=>a-b);
                     </code></pre>
