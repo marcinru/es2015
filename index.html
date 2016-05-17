@@ -279,8 +279,27 @@ parseInt("3", 4);    // 3
                     </section>
                 </section>
                 <section>
-                    <h4>JavaScript app example in ECMAScript 2015</h4>
-                    <img src="images/vikingLotto.jpeg" alt="">
+                    <section>
+                        <h4>JavaScript app example in ECMAScript 2015</h4>
+                        <img src="images/vikingLotto.jpeg" alt="">
+                    </section>
+                    <section>
+                        <h4>
+                            Viking Lotto is a cooperation between the national lotteries in Sweden
+                            and other scandinavian countries.
+                        </h4>
+                        <p>
+                            The issue is to select six numbers which can be any integer from 1 to 48, called a combination.
+                        </p>
+                        <pre><code class="hljs code" data-trim contenteditable>
+// returns 6 random integers from range 1-48
+// example output: [4, 5, 7, 36, 43, 47]
+
+[...Array(48).keys()].map(n => n+1)
+                     .sort(()=>0.5-Math.random())
+                     .slice(-6).sort((a,b)=>a-b);
+                    </code></pre>
+                    </section>
                 </section>
             </div>
         </div>
