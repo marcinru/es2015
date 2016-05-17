@@ -176,7 +176,7 @@
                     <img src="images/es2015.png" alt="">
                 </section>
                 <section>
-                    <h3>Can I still use ECMAScript 5?</h3>
+                    <h3>Should I switch to the new version today?</h3>
                     <table>
                         <thead>
                             <tr>
@@ -333,11 +333,11 @@ parseInt("3", 4);    // 3
                             In ES5 this is often done as:
                         </p>
                     <pre><code class="hljs code" data-trim contenteditable>
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-// Append all items from arr2 onto arr1
-Array.prototype.push.apply(arr1, arr2);
-arr1;
+var array1 = [0, 1, 2];
+var array2 = [3, 4, 5];
+// Append all items from array2 onto array1
+Array.prototype.push.apply(array1, array2);
+array1;
                     </code></pre>
                     </section>
                     <section>
@@ -346,13 +346,45 @@ arr1;
                             With ES6 spread you can now write the above as:
                         </p>
                     <pre><code class="hljs code" data-trim contenteditable>
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-// Append all items from arr2 onto arr1
-arr1.push(...arr2);
-arr1;
+let array1 = [0, 1, 2];
+let array2 = [3, 4, 5];
+// Append all items from array2 onto array1
+array1.push(...array2);
+array1;
                     </code></pre>
                     </section>
+                </section>
+                <section>
+                    <section>
+                        <h4>And Now for Something Completely Different</h4>
+                        <p>“java.util.Date”, Salvador Dali, oil on canvas, 1931</p>
+                        <p style="margin-bottom: 0;">
+                            <small>
+                                Source: <a href="http://classicprogrammerpaintings.com">classicprogrammerpaintings.com</a>
+                            </small>
+                        </p>
+                        <img src="images/date.png" alt="">
+                    </section>
+                    <section>
+                        <h3>Do you know JavaScript?</h3>
+                        <p style="text-align: left;">5. Assuming it's year 2016, what will the following return?</p>
+                    <pre><code class="hljs code" data-trim contenteditable>
+var today = new Date();
+today.getDay();   // 5 if it's Friday (Monday is 1)
+today.getMonth(); // 4 if it's May (indexing from 0)
+today.getYear();  // ?
+                    </code></pre>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>2016</li>
+                            <li>16</li>
+                            <li>116</li>
+                            <li>Uncaught TypeError: today.getYear is not a function</li>
+                        </ol>
+                    </section>
+                </section>
+                <section>
+                    <h4>THE END</h4>
+                    <img src="images/keep-calm-and-learn-javascript.jpg" alt="">
                 </section>
             </div>
         </div>
