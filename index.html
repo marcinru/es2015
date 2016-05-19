@@ -22,7 +22,17 @@
         </script>
         <style>
             .reveal .code {
-                font-size: 130%; line-height: normal; padding: 15px;
+                font-size: 130%;
+                line-height: normal;
+                padding: 15px;
+            }
+            .reveal .question {
+                text-align: left;
+                padding-left: 1.3em;
+            }
+            .reveal .answers {
+                list-style-type: lower-alpha;
+                font-size: 90%;
             }
         </style>
     </head>
@@ -227,11 +237,11 @@
                 <section>
                     <section>
                         <h3>Do you know JavaScript?</h3>
-                        <p style="text-align: left;">1. What will the following instruction return?</p>
+                        <p class="question">1. What will the following instruction return?</p>
                     <pre><code class="hljs code" data-trim contenteditable>
 ["1", "2", "3"].map(parseInt);
                     </code></pre>
-                        <ol style="list-style-type: lower-alpha;">
+                        <ol class="answers">
                             <li>[1, 2, 3]</li>
                             <li>["1", "2", "3"]</li>
                             <li>[1, NaN, NaN]</li>
@@ -240,11 +250,11 @@
                     </section>
                     <section>
                         <h3>Do you know JavaScript?</h3>
-                        <p style="text-align: left;">2. What will the following instruction return?</p>
+                        <p class="question">2. What will the following instruction return?</p>
                     <pre><code class="hljs code" data-trim contenteditable>
 ["a", "b", "1", "2", "3"].map(parseInt).splice(2);
                     </code></pre>
-                        <ol style="list-style-type: lower-alpha;">
+                        <ol class="answers">
                             <li>[1, 2, 3]</li>
                             <li>[1, NaN, NaN]</li>
                             <li>["a", NaN, NaN, NaN, NaN]</li>
@@ -252,7 +262,7 @@
                         </ol>
                     </section>
                     <section>
-                        <p style="text-align: left;">
+                        <p class="question">
                             The parseInt() function parses a string argument and returns an integer of the specified
                             radix (the base in mathematical numeral systems).
                         </p>
@@ -276,15 +286,15 @@ parseInt("3", 4);    // 3
                 <section>
                     <section>
                         <h3>Do you know JavaScript?</h3>
-                        <p style="text-align: left;">3. What will the following instruction return?</p>
+                        <p class="question">3. What will the following instruction return?</p>
                     <pre><code class="hljs code" data-trim contenteditable>
 ["1", "112", "113"].map(n => +n);
                     </code></pre>
-                        <ol style="list-style-type: lower-alpha;">
+                        <ol class="answers">
                             <li>[1, 112, 113]</li>
                             <li>["1", "112", "113"]</li>
                             <li>[1, NaN, NaN]</li>
-                            <li>Uncaught SyntaxError: Unexpected token =></li>
+                            <li>Uncaught SyntaxError: Unexpected token&nbsp;=></li>
                         </ol>
                     </section>
                 </section>
@@ -315,11 +325,11 @@ parseInt("3", 4);    // 3
                 <section>
                     <section>
                         <h3>Do you know JavaScript?</h3>
-                        <p style="text-align: left;">4. What will the following instruction return?</p>
+                        <p class="question">4. What will the following instruction return?</p>
                     <pre><code class="hljs code" data-trim contenteditable>
 [0, 1, 2].push(3, 4, 5);
                     </code></pre>
-                        <ol style="list-style-type: lower-alpha;">
+                        <ol class="answers">
                             <li>[0, 1, 2, 3, 4, 5]</li>
                             <li>[0, 1, 2, [3, 4, 5]]</li>
                             <li>[3, 4, 5]</li>
@@ -328,7 +338,7 @@ parseInt("3", 4);    // 3
                     </section>
                     <section>
                         <h3>ECMAScript 5 example</h3>
-                        <p>
+                        <p style="font-size: 90%;">
                             push( ) is often used to push an array to the end of an existing array.
                             In ES5 this is often done as:
                         </p>
@@ -367,14 +377,14 @@ array1;
                     </section>
                     <section>
                         <h3>Do you know JavaScript?</h3>
-                        <p style="text-align: left;">5. Assuming it's year 2016, what will the following return?</p>
+                        <p class="question">5. Assuming it's year 2016, what will the following return?</p>
                     <pre><code class="hljs code" data-trim contenteditable>
 var today = new Date();
 today.getDay();   // 5 if it's Friday (Monday is 1)
 today.getMonth(); // 4 if it's May (indexing from 0)
 today.getYear();  // ?
                     </code></pre>
-                        <ol style="list-style-type: lower-alpha;">
+                        <ol class="answers">
                             <li>2016</li>
                             <li>16</li>
                             <li>116</li>
